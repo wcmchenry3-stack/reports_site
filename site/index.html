@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1a2e; --muted: #6b7280; --border: #e5e7eb;
+    --panel: #f9fafb; --accent: #4338ca;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1117; --fg: #e5e7eb; --muted: #9ca3af; --border: #2a2e3a; --panel: #171a23;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg); margin: 0; padding: 24px;
+    font: 14px/1.5 -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  .page { max-width: 640px; margin: 40px auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 6px; }
+  .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+  .card {
+    display: block; background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 20px; margin-bottom: 12px;
+    text-decoration: none; color: inherit; transition: border-color 0.15s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card .name { font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+  .card .desc { color: var(--muted); font-size: 0.85rem; }
+  @media (max-width: 480px) {
+    body { padding: 16px; }
+    .page { margin: 20px auto; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Reports</h1>
+  <div class="subtitle">A running collection of small personal reports and tools.</div>
+
+  <a class="card" href="/house-2026-races/">
+    <div class="name">US 2026 Elections</div>
+    <div class="desc">House, Senate, and Governor race predictions — trends, flip risk, and volatility across snapshots.</div>
+  </a>
+</div>
+</body>
+</html>
